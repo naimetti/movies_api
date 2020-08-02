@@ -26,7 +26,7 @@ SECRET_KEY = '%h-m25r-_-xekm#vdi18v^n2-oo5%vm!^zc2_ty$r2t9ny*oau'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost',
+    'localhost', ''
 ]
 
 
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'movies_api.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,16 +73,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'movies_api.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql',
         'HOST': 'localhost',
-        'NAME': 'movies',
+        'NAME': 'postgres',
         'PASSWORD': 'wsxedc',
-        'USER': 'posrtgres',
+        'USER': 'postgres',
         'PORT': 55432,
     }
 }
@@ -125,3 +124,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.AdminRenderer',
+
+    ]
+}

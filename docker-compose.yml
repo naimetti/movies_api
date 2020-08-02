@@ -1,8 +1,6 @@
 version: '2.0'
 services:
   db:
-    build:
-
     image: postgres
     environment:
       POSTGRES_PASSWORD: wsxedc
