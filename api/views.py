@@ -21,7 +21,6 @@ class PersonViewSet(viewsets.ModelViewSet):
         'as_producer__title',
     ]
 
-
 class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all()
     serializer_class = MovieSerializer
