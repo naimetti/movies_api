@@ -16,13 +16,3 @@ class PersonFactory(factory.django.DjangoModelFactory):
 def actors(db):
     for _ in range(10):
         PersonFactory()
-
-
-@py
-
-
-
-
-
-
-

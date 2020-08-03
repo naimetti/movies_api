@@ -14,7 +14,7 @@ class Person(models.Model):
 class Movie(models.Model):
     title = models.CharField(max_length=256)
     release_year = models.IntegerField()
-    cast = models.ManyToManyField('Person', related_name='as_actor', related_query_name='actor')
+    cast = models.ManyToManyField('Person', related_name='as_actor')
     directors = models.ManyToManyField('Person', related_name='as_director', related_query_name='director')
     producers = models.ManyToManyField('Person', related_name='as_producer', related_query_name='producer')
 
