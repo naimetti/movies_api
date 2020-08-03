@@ -1,7 +1,9 @@
 coreapi
 django
 django-filter
+django-heroku
 djangorestframework
+gunicorn
 psycopg2-binary
 pygments
 pyyaml

@@ -130,3 +130,4 @@ dmypy.json
 
 .envrc
 .idea
+staticfiles/
