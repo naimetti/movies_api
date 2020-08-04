@@ -13,6 +13,6 @@ class PersonFactory(factory.django.DjangoModelFactory):
 
 
 @pytest.fixture
-def actors(db):
+def persons(db):
     for _ in range(10):
         PersonFactory()
