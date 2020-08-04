@@ -3,6 +3,7 @@ django
 django-filter
 django-heroku
 djangorestframework
+drf-yasg
 gunicorn
 psycopg2-binary
 pygments
